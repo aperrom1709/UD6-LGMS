@@ -1,0 +1,11 @@
+for $libro in /Libros/libro
+where $libro/NumPaginas > 500
+return
+    <libro>
+        <Cod_Libro>{data($libro/Cod_Libro)}</Cod_Libro>
+        <Titulo>{data($libro/Titulo)}</Titulo>
+        <Editorial>{data($libro/Editorial)}</Editorial>
+        <Edicion>{data($libro/Edicion)}</Edicion>
+        <ISBN>{data($libro/ISBN)}</ISBN>
+        <paginas>{data($libro/NumPaginas)}</paginas>
+    </libro>
